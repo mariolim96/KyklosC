@@ -1,32 +1,60 @@
 {
-//   "extends": "@tsconfig/next/tsconfig.json",
-  "compilerOptions": {
-    "target": "es6",
-    "lib": ["dom", "dom.iterable", "esnext"],
-    // "types": ["@types/node", "@types/react", "next/types/global", "node"],
-    "allowJs": true,
-    "skipLibCheck": true,
-    "strict": true,
-    "noEmit": true,
-    "esModuleInterop": true,
-    "module": "esnext",
-    "moduleResolution": "bundler",
-    "resolveJsonModule": true,
-    "isolatedModules": true,
-    "jsx": "preserve",
-    "incremental": true,
-    "plugins": [
-      {
-        "name": "next"
-      }
-    ],
-    "paths": {
-      "@/*": ["./src/*"]
-    }
-  },
-//   "ts-node": {
-//     "require": ["tsconfig-paths/register"]
-//   },
-  "include": ["next-env.d.ts", "src", ".next/types/**/*.ts", "**/*.ts", "**/*.tsx"],
-  "exclude": ["node_modules"]
+    //   "extends": "@tsconfig/next/tsconfig.json",
+    "compilerOptions": {
+        "target": "es6",
+        "lib": ["dom", "dom.iterable", "esnext"],
+        "types": ["@types/node", "@types/react", "next/types/global", "node"],
+        "allowJs": true,
+        "skipLibCheck": true,
+        "strict": true,
+        "noEmit": true,
+        "esModuleInterop": true,
+        "module": "esnext",
+        "moduleResolution": "bundler",
+        "resolveJsonModule": true,
+        "isolatedModules": true,
+        "jsx": "preserve",
+        "incremental": true,
+        "plugins": [
+            {
+                "name": "next"
+            }
+        ],
+        "paths": {
+            "@/*": ["./src/*"]
+        }
+    },
+    "ts-node": {
+        "require": ["tsconfig-paths/register"]
+    },
+    "include": ["next-env.d.ts", "src", ".next/types/**/*.ts", "**/*.ts", "**/*.tsx", "prettier.config.js"],
+    "exclude": ["node_modules"]
 }
+
+// {
+//     "compilerOptions": {
+//       "target": "es5",
+//       "lib": ["dom", "dom.iterable", "esnext"],
+//       "allowJs": true,
+//       "skipLibCheck": true,
+//       "strict": true,
+//       "noEmit": true,
+//       "esModuleInterop": true,
+//       "module": "esnext",
+//       "moduleResolution": "bundler",
+//       "resolveJsonModule": true,
+//       "isolatedModules": true,
+//       "jsx": "preserve",
+//       "incremental": true,
+//       "plugins": [
+//         {
+//           "name": "next"
+//         }
+//       ],
+//       "paths": {
+//         "@/*": ["./src/*"]
+//       }
+//     },
+//     "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],
+//     "exclude": ["node_modules"]
+//   }

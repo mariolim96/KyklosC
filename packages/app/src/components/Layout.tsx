@@ -1,14 +1,15 @@
 import React, { PropsWithChildren } from 'react'
-import { Header } from './Header'
+
 import { Footer } from './Footer'
+import { Header } from './Header'
 
 export function Layout(props: PropsWithChildren) {
-  return (
-    <div className='flex flex-col min-h-screen'>
-      <Header />
+    return (
+        <div className="flex min-h-screen flex-col">
+            <Header />
 
-      <main className='flex-grow px-4 container max-w-3xl mx-auto'>{props.children}</main>
-      <Footer />
-    </div>
-  )
+            <main className="container mx-auto max-w-3xl grow px-4">{props.children}</main>
+            <Footer />
+        </div>
+    )
 }

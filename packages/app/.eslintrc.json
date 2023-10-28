@@ -1,26 +1,63 @@
+// {
+//     "$schema": "https://json.schemastore.org/eslintrc",
+//     "root": true,
+//     "extends": ["next/core-web-vitals", "prettier", "plugin:tailwindcss/recommended", "prettier-plugin-tailwindcss"],
+//     "plugins": ["tailwindcss"],
+//     "rules": {
+//         "@next/next/no-html-link-for-pages": "off",
+//         "react/jsx-key": "off",
+//         "tailwindcss/no-custom-classname": "off"
+//     },
+//     "settings": {
+//         "tailwindcss": {
+//             "callees": ["cn"],
+//             "config": "tailwind.config.js"
+//         },
+//         "next": {
+//             "rootDir": ["./"]
+//         }
+//     },
+//     "overrides": [
+//         {
+//             "files": ["*.ts", "*.tsx"],
+//             "parser": "@typescript-eslint/parser"
+//         }
+//     ]
+// }
+
 {
-    "$schema": "https://json.schemastore.org/eslintrc",
-    "root": true,
-    "extends": ["next/core-web-vitals", "prettier", "plugin:tailwindcss/recommended"],
-    "plugins": ["tailwindcss"],
+    "env": {
+        "browser": true,
+        "es2021": true
+    },
+    "extends": [
+        "next/core-web-vitals",
+        // "standard-with-typescript",
+        // "plugin:react/recommended"
+        "plugin:tailwindcss/recommended",
+        // "prettier-plugin-tailwindcss",
+        "prettier"
+    ],
+    "overrides": [
+        {
+            "env": {
+                "node": true
+            },
+            "files": [".eslintrc.{js,cjs}"],
+            "parserOptions": {
+                "sourceType": "script"
+            }
+        }
+    ],
+    "parserOptions": {
+        "ecmaVersion": "latest",
+        "sourceType": "module"
+        // "project": "./tsconfig.json"
+    },
+    "plugins": ["react", "tailwindcss"],
     "rules": {
         "@next/next/no-html-link-for-pages": "off",
         "react/jsx-key": "off",
         "tailwindcss/no-custom-classname": "off"
-    },
-    "settings": {
-        "tailwindcss": {
-            "callees": ["cn"],
-            "config": "tailwind.config.js"
-        },
-        "next": {
-            "rootDir": ["./"]
-        }
-    },
-    "overrides": [
-        {
-            "files": ["*.ts", "*.tsx"],
-            "parser": "@typescript-eslint/parser"
-        }
-    ]
+    }
 }
