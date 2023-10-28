@@ -1,9 +1,9 @@
 'use client'
 
 import React from 'react'
-import { GetNetworkColor } from '@/utils/network'
 import { useBlockNumber, useNetwork } from 'wagmi'
 
+import { GetNetworkColor } from '../utils/network'
 import { LinkComponent } from './LinkComponent'
 
 export function NetworkStatus() {
@@ -11,6 +11,7 @@ export function NetworkStatus() {
     const network = useNetwork()
     const explorerUrl = network.chain?.blockExplorers?.default.url
     const networkName = network.chain?.name ?? 'Ethereum'
+    // eslint-disable-next-line @typescript-eslint/no-unused-vars
     const color = GetNetworkColor(networkName)
 
     return (
@@ -25,3 +26,5 @@ export function NetworkStatus() {
         </div>
     )
 }
+
+export default NetworkStatus

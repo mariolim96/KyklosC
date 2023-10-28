@@ -8,21 +8,27 @@ interface Props {
     className?: string
 }
 
-export function LinkComponent(props: Props) {
-    const className = props.className ?? ''
-    const isExternal = props.href.match(/^([a-z0-9]*:|.{0})\/\/.*$/) || props.isExternal
+export function LinkComponent({ href, children, isExternal, className }: Props) {
+    const isExternalLink = href.match(/^([a-z0-9]*:|.{0})\/\/.*$/) || isExternal
 
-    if (isExternal) {
+    if (isExternalLink) {
         return (
-            <Link className={className} href={props.href} target="_blank" rel="noopener noreferrer">
-                {props.children}
+            <Link className={className} href={href} target="_blank" rel="noopener noreferrer">
+                {children}
             </Link>
         )
     }
 
     return (
-        <Link className={className} href={props.href}>
-            {props.children}
+        <Link className={className} href={href}>
+            {children}
         </Link>
     )
 }
+
+LinkComponent.defaultProps = {
+    isExternal: false,
+    className: '',
+}
+
+export default LinkComponent

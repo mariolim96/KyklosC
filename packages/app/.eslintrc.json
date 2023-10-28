@@ -34,8 +34,9 @@
         "next/core-web-vitals",
         // "standard-with-typescript",
         // "plugin:react/recommended"
+        "airbnb",
+        "airbnb-typescript",
         "plugin:tailwindcss/recommended",
-        // "prettier-plugin-tailwindcss",
         "prettier"
     ],
     "overrides": [
@@ -49,15 +50,17 @@
             }
         }
     ],
+    "ignorePatterns": ["node_modules/", ".next/", "out/", "prettier.config.js"],
     "parserOptions": {
         "ecmaVersion": "latest",
-        "sourceType": "module"
-        // "project": "./tsconfig.json"
+        "sourceType": "module",
+        "project": "./packages/app/tsconfig.json"
     },
     "plugins": ["react", "tailwindcss"],
     "rules": {
         "@next/next/no-html-link-for-pages": "off",
         "react/jsx-key": "off",
-        "tailwindcss/no-custom-classname": "off"
+        "tailwindcss/no-custom-classname": "off",
+        "import/order": "off"
     }
 }
