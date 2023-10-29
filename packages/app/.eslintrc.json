@@ -54,7 +54,7 @@
     "parserOptions": {
         "ecmaVersion": "latest",
         "sourceType": "module",
-        "project": "./packages/app/tsconfig.json"
+        "project": "./packages/app/tsconfig.json" //"C:\\Users\\mario\\OneDrive\\Desktop\\newKyklos\\KyklosC\\packages\\app\\tsconfig.json"
     },
     "plugins": ["react", "tailwindcss"],
     "rules": {

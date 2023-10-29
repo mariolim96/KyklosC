@@ -1,10 +1,14 @@
 import React, { PropsWithChildren } from 'react'
 
-import { Web3Provider } from './Web3'
 import { ThemeProvider } from './ThemeProvider'
+import { Web3Provider } from './Web3'
 
-const Providers = ({ children }: PropsWithChildren) => {
-    return <Web3Provider><ThemeProvider>{children}</ThemeProvider></Web3Provider>
+function Providers({ children }: PropsWithChildren) {
+    return (
+        <Web3Provider>
+            <ThemeProvider>{children}</ThemeProvider>
+        </Web3Provider>
+    )
 }
 
 export default Providers

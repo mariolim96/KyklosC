@@ -5,6 +5,7 @@ import { useBlockNumber, useNetwork } from 'wagmi'
 
 import { GetNetworkColor } from '../utils/network'
 import { LinkComponent } from './LinkComponent'
+import { Badge } from './ui/badge'
 
 export function NetworkStatus() {
     const block = useBlockNumber({ watch: true })
@@ -16,7 +17,7 @@ export function NetworkStatus() {
 
     return (
         <div className="flex items-center  gap-2 p-4">
-            <div className={` badge-info badge`}>{networkName}</div>
+            <Badge variant="secondary">{networkName}</Badge>
             {explorerUrl && (
                 <LinkComponent href={explorerUrl}>
                     <p className="text-xs"># {block.data?.toString()}</p>
